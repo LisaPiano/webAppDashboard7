@@ -6,9 +6,9 @@
         <link rel = "stylesheet" href = "css/style.css">
         
     </head>
+
+
     <body>
-       
-       
        <header>
            <h1>WebApp &#8482</h1>
            <div class="bell-icon">
@@ -247,21 +247,61 @@
     </div>
 </section> 
 <!-- Ended the RECENT ACTIVITY section -->
+
+<!--  Begin the MESSAGE USER section -->
         
+<section class="message-user">
+    <h3>MESSAGE USER</h3>
 
+    <form class="widget-container">
+    <div class="search">
+        <input type="search" placeholder="Search for User">
+    </div>
+    <div class="textarea">
+        <input type="textarea" placeholder="Message for User">
+    </div>
+    <div class="sendButton">
+        <button class="send">SEND</button>
+    </div>
+</form>
+</section>
+<!--  End the MESSAGE USER section -->
 
+<!--  Begin the SETTINGS section -->
+<section class="settings">
+    <h3>SETTINGS</h3>
+    
+        <!-- PART WITH TOGGLE SWITCHES -->
+    <div class="toggleOnOff">
+        <p>Send Email Notifications</p>
+        <br><br>
+        <input type="checkbox" id="switch" class="checkboxOne" />
+        <label for="switch" class="toggle">
+            <p>OFF       ON</p>
+        </label>
+        <p>Set Profile to Public</p>
+        <br><br>
+        <input type="checkbox" id="switch" class="checkboxTwo" />
+        <label for="switch" class="toggle">
+            <p>OFF       ON</p>
+        </label>
+    </div>
+   <!-- END PART WITH TOGGLE SWITCHES -->
+   <select class="form-field" id="timezone">
+    <option disabled selected>Select a Timezone</option>
+    <option>Eastern</option>
+    <option>Mountain</option>
+    <option>Pacific</option>
+    </select>
+    <div class="settings-button" >
+   <button class="button-primary" id="save">Save</button>
+   <button class="button-disabled" id="cancel">Cancel</button>
+   </div>
+   </section>
+   
+<!--  End the SETTINGS section -->
 
-
-
-
-
-
-</main>
-       
-       
-       
-       
-       
+</main>  
         <script src="js/script.js"></script> 
     </body>
 </html>

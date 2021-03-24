@@ -5,3 +5,58 @@
   }
   
   
+
+
+
+/* 
+  TOGGLE SWITCH */
+
+  /* TOGGLE */
+  .toggle {
+    position: relative; 
+    display: inline-block; 
+    width: 100px; 
+    height: 53px; 
+    background-color: blue; 
+    border-radius: 30px; 
+    border: 2px solid gray; 
+  }
+/* TOGGLE AFTER SLIDE CHANGES */
+
+.toggle: after {
+  content: ''; 
+  position: absolute; 
+  width: 50px; 
+  height: 50px; 
+  border-radius: 50%; 
+  background-color: gray; 
+  top: 1px; 
+  left: 1px; 
+  transition: all .5s; 
+}
+/* TOGGLE checked effect for checkboxOne */
+.checkboxOne:checked + .toggle::after {
+  left: 49px; 
+}
+.checkboxOne:checked + .toggle {
+  background-color: green; 
+}
+.checkboxOne {
+  display: none; 
+}
+
+/* TOGGLE checked effect for checkboxTwo */
+.checkboxTwo:checked + .toggle::after {
+  left: 49px; 
+}
+.checkboxTwo:checked + .toggle {
+  background-color: green; 
+}
+.checkboxTwo {
+  display: none; 
+}
+
+
+
+
+  
