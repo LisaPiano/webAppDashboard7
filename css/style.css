@@ -2,11 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
   }
-  /* 
-  Style for HEADER and NAV as GRID */
+  
+  /* Style for HEADER and NAV as GRID */ */
 
-  /* .grid-container {
+  .grid-container {
     display: grid; 
     grid-template-columns: 100%;
     grid-template-rows: auto; 
@@ -14,48 +15,60 @@
     "header"
     "nav"
     "main"
-  } */
+  }
 /* ---------------------HEADER---------------------------- */
   .header {
+    grid-area: header;
     display: grid;
-    background-color: #00a2ed;
+    font-family: 'Roboto', sans-serif;
+    height: 100px; 
+    background-color: rgb(104, 129, 238);;
+    opacity: 100%;
     color: white; 
-    grid-template-columns: 39% 11% 4% 19% 29%;
+    grid-template-columns: 33% 20% 4% 14% 30%;
     grid-template-rows: auto; 
   }
   .webapp {
-    padding-top: 40px; 
-    padding-left: 30px; 
+    padding-top: 50px; 
+    padding-left: 10px; 
+    font-size: 10px; 
   }
+ 
   .bell-icon {
-    padding-top: 40px; 
+    padding-top: 45px; 
+    padding-left: 10px; 
   }
     .first-face img {
     border-radius: 50%; 
+    border: black; 
+    height: 40px;
+    width: 40px; 
+    margin-top: 40px; 
   }
   .line {
     background-color: white;  
     width: 1px; 
     margin-top: 30px; 
     opacity: 60%; 
-    height: 90px; 
+    height: 50px; 
     padding-top: 40px;
   }
   .student-name{
-    font-size: 20px; 
-     padding-top: 40px; 
-     padding-left: 30px; 
+    font-size: 10px; 
+     padding-top: 55px; 
+     padding-right: 40px; 
+    
   }
 
   /* ________________________________NAV_____________________________  */
   
   .nav {
+    grid-area: "nav";
+    height: 100px; 
     display: grid;
-    padding: 60px; 
-    padding-bottom: 40px;
-    padding-left: 150px; 
-    padding-right: 40px; 
-    background-color: darkblue;
+    padding: 35px;  
+    background-color: midnightblue;
+    opacity: 80%;
     grid-template-columns: 25% 25% 25% 25%;
     grid-template-rows: auto; 
   }
@@ -66,48 +79,58 @@
   .members-icon,
   .settings-icon {
     fill: white; 
+    
+  }
+
+  /* ___________________________MAIN_____________ */
+
+  .main {
+    grid-area: "main";
+    font-family: 'Roboto', sans-serif;
   }
 /* ___________________________Dashboard and Search_____________ */
   
 .dashboard-and-search {
   display: grid; 
-  grid-template-columns: 30% 70%;
-  grid-template-rows: 80px; 
+  grid-template-columns: 20% 80%;
+  grid-template-rows: 60px; 
 }
 .dashboard-text {
-  padding-top: 30px; 
-  padding-left: 30px; 
-  font-size: 30px; 
+  padding-top: 15px;
+  padding-left: 20px; 
 }
 
 .search {
-  padding-top: 30px; 
+
+  padding-left: 80px; 
  
 }
 .search-placeholder {
-  height: 80px; 
+  height: 40px; 
   width: 100%; 
-  padding-left: 30px; 
+  padding-left: 50px; 
+  padding-top: 20px; 
+  padding-bottom: 5px; 
   background-color: #dfe9f1;
   font-size: 20px; 
+  border: lightgray; 
 }
 /* ___________________________Alert_____________ */
 
 .alert {
   display: grid; 
-  grid-template-columns: 70% 30%; 
-  height: 80px; 
-  padding: 50px; 
-  padding-bottom: 70px;
-  margin: 40px; 
-  margin-right: 10px; 
-  width: 80%; 
-  height: 80px; 
-  border-radius: 25px; 
-  background-color:#00a2ed;
+  grid-template-columns: 80% 20%; 
+  grid-template-rows: 3px; 
+  padding: 8px 15px 24px; 
+  width: 90%; 
+ 
+  
+  background-color: midnightblue;
   color: white; 
   text-align: left; 
-  font-size: 30px; 
+  font-size: 14px; 
+  margin-left: 20px; 
+  border-radius: 12px; 
 }
 .p {
   text-align: right; 

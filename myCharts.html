@@ -1,0 +1,38 @@
+        <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name = "viewport" content = "width=device-width, initial-scale=1">
+        <title>My Charts</title>
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+        
+    </head>
+   <body>
+       <div class="container">
+            <canvas id="myChart">
+            </canvas>
+       </div>
+
+       <script>
+           let myChart = document.getElementById("myChart").getContext('2d');
+           //create a new object
+           let massPopChart = newChart(myChart, {
+               type: 'bar', 
+               data: [{
+                    labels: ['Boston', 'Worcester', 'SpringField', 'Lowell', 'Cambridge', 'New Bedford'],
+                    datasets: [{
+                        label: 'Population',
+                        data: [
+                            100, 
+                            200, 
+                            300, 
+                            400, 
+                            500, 
+                            600
+                        ]
+                    }]
+               };
+               options: {}
+           })
+       </script>
+   </body>
+   </html>
