@@ -3,6 +3,7 @@
     <head>
         <meta name = "viewport" content = "width=device-width, initial-scale=1">
         <title>WebAppDashboard</title>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel = "stylesheet" href = "css/style.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
@@ -90,22 +91,36 @@
             ______________________________________ -->
 
             <section class="first-traffic-chart">
-                <h3>TRAFFIC</h3>
-                <div class="traffic-graph">
+                <h3 class="trafficText">TRAFFIC</h3>
+                <div class="trafficHeadings">
                     <ul class="traffic-nav">
-                        <li class="traffic-nav-link">Hourly</li>
-                        <li class="traffic-nav-link">Daily</li>
-                        <li class="traffic-nav-link-active">Weekly</li>
-                        <li class="traffic-nav-link">Monthly</li>
+                        <li class="traffic-nav-hourly">Hourly</li>
+                        <li class="traffic-nav-daily">Daily</li>
+                        <li class="traffic-nav-weekly">Weekly</li>
+                        <li class="traffic-nav-monthly">Monthly</li>
                     </ul>
-                    <div class="widget-container-full">
-                        <!-- element line graph will attach to -->
-                        <canvas id="traffic-chart"></canvas>
-                    </div>
                 </div>
+                
+                <div class="wrapperBar">
+                    <canvas id="myChartBar"></canvas>
+                    </div>
+                    
+                    <div class="wrapperPie">
+                        <canvas id="myChartPie"></canvas>
+                        </div>
+                    
+                        <div class="wrapperLine">
+                            <canvas id="myChartLine"></canvas>
+                            </div>
+                    
+                    
             </section>
 
-            <!-- bar graph -->
+
+            <!-- --------------------------------------
+            BAR CHART HERE
+            ______________________________________ -->
+            
 <section class="daily">
     <h3>DAILY TRAFFIC</h3>
     <div class="widget-container-half">
@@ -326,7 +341,8 @@
    
 <!--  End the SETTINGS section -->
 </main>  
-        <script src="js/script.js"></script> 
-    </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+<script src="js/scripts.js"></script> 
+ </body>
     
     </html>

@@ -1,4 +1,4 @@
-* {
+ * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -137,7 +137,55 @@
 }
 
 
+/* _______________TrafficHeadings   traffic-nav_____________ */
+.trafficText {
+padding: 30px; 
 
+}
+.traffic-nav {
+  display: grid; 
+  grid-template-columns: 31% 23% 23% 23%; 
+  grid-template-rows: 40px; 
+  list-style-type: none; 
+} 
+.traffic-nav li {
+  padding-top: 8px; 
+  text-align: center; 
+  font-weight: bold;
+}
+.traffic-nav-hourly {
+  margin-left: 20px; 
+  border: solid 1px #0ac50a9c; 
+    background-color: #0ac50a9c; 
+  opacity: 85%; 
+  color: white; 
+  border-radius: 24px; 
+ 
+}
+
+/*
+Traffic Line Graph
+   */
+/* 
+   .wrapperForLineGraph {
+    max-width: 600px;
+    margin: 0 auto;
+} */
+
+.wrapperBar {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.wrapperPie {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.wrapperLine {
+    max-width: 600px;
+    margin: 0 auto;
+}
 
 
 
@@ -187,7 +235,7 @@
 }
 .checkboxTwo {
   display: none; 
-}
+} */
 
 
 
