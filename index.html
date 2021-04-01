@@ -87,7 +87,7 @@
            
 <!-- 
             --------------------------------------
-            LINE GRAPH CHARTS HERE
+            LINE GRAPH Bar and Doughnut CHARTS HERE
             ______________________________________ -->
 
             <section class="first-traffic-chart">
@@ -101,39 +101,34 @@
                     </ul>
                 </div>
                 
+
+                <div class="wrapperLine">
+                    <canvas id="myChartLine"></canvas>
+                    </div>
+            </section>
+
+                 <!-- --------------------------------------
+            BAR CHART HERE
+            ______________________________________ -->
+
+            <section>
+                <h3>DAILY TRAFFIC</h3>
                 <div class="wrapperBar">
                     <canvas id="myChartBar"></canvas>
                     </div>
-                    
-                    <div class="wrapperPie">
-                        <canvas id="myChartPie"></canvas>
-                        </div>
-                    
-                        <div class="wrapperLine">
-                            <canvas id="myChartLine"></canvas>
-                            </div>
-                    
-                    
             </section>
 
+             <!-- doughnut chart -->
+            <section>
+                <h3>MOBILE USERS</h3>
+                <div class="wrapperPie">
+                    <canvas id="myChartPie"></canvas>
+                    </div>
+            </section>
+                    
+                        
 
-            <!-- --------------------------------------
-            BAR CHART HERE
-            ______________________________________ -->
-            
-<section class="daily">
-    <h3>DAILY TRAFFIC</h3>
-    <div class="widget-container-half">
-         <!-- element bar graph will attach to -->
-         <canvas id="daily-chart"></canvas>
-    </div>
-</section>
-
-     <!-- doughnut chart -->
-<section class="doughnut">
-    <h3>MOBILE USERS</h3>
-    <div class="widget-container-half">
-    </div>
+    
     <div class="useTypes">
         <ul>
             <li>Desktop</li>
@@ -141,7 +136,7 @@
             <li>Phones</li>
         </ul>
     </div>
-    </section>
+   
 
     <!-- SOCIAL STATS and MEMBERS Start HERE! -->
 
