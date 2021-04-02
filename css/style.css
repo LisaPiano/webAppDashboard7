@@ -4,9 +4,17 @@
     box-sizing: border-box;
     
   }
-  
-  /* Style for HEADER and NAV as GRID */ */
+/* 
+OVERALL STYLES
+  _____________________________________________________
+   */
+  /* Style for HEADER and NAV as GRID */ 
 
+  h3 {
+    padding-left: 20px; 
+    padding-bottom: 20px; 
+    padding-top: 30px; 
+  }
   .grid-container {
     display: grid; 
     grid-template-columns: 100%;
@@ -138,10 +146,7 @@
 
 
 /* _______________TrafficHeadings   traffic-nav_____________ */
-.trafficText {
-padding: 30px; 
 
-}
 .traffic-nav {
   display: grid; 
   grid-template-columns: 31% 23% 23% 23%; 
@@ -168,20 +173,13 @@ Traffic Line Graph
    */
 
    
-.wrapperBar {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.wrapperPie {
-    max-width: 400px;
-    margin: 0 auto;
-}
-
+.wrapperBar,
+.wrapperDoughnut,
 .wrapperLine {
-    max-width: 600px;
+    max-width: 300px;
     margin: 0 auto;
-}
+   
+
 
 
 
