@@ -1,96 +1,82 @@
 console.log('hi');
 
-var ctxOne = document.getElementById("myChartBar");
-var ctxTwo = document.getElementById("myChartPie");
-var ctxThree = document.getElementById("myChartLine");
+let ctxOne = document.getElementById("myChartLine").getContext("2d");
+let ctxTwo = document.getElementById("myChartBar").getContext("2d");
+let ctxThree = document.getElementById("myChartDoughnut").getContext("2d");
 
-var stars = [135850, 52122, 148825, 16939, 9763];
-var frameworks = ["React", "Angular", "Vue", "Hyperapp", "Omi"];
+let myChartLine = new Chart(ctxOne, {
+  type: "line", 
+  data: { 
+          labels: ["16/22", "23-29", "30-05", "6-12", "13-19", "20-26", "27-3", "4-10", "11-17", "18-24", "25-31"],
+          datasets: [
+            {
+              label: "Traffic",
+              data: [500, 1200, 1000, 2000, 1500, 1800, 1200, 1800, 2300, 1500, 2500],
+              backgroundColor: 
+              "#cdcdcd",
+              borderColor: 
+              "#778899",
+            borderWidth: .5
 
-var myChartBar = new Chart(ctxOne, {
-  type: "bar",
-  data: {
-    labels: frameworks,
-    datasets: [
-      {
-        label: "Github Stars",
-        data: stars,
-        backgroundColor: [
-          "rgba(255, 99, 132, 0.2)",
-          "rgba(54, 162, 235, 0.2)",
-          "rgba(255, 206, 86, 0.2)",
-          "rgba(75, 192, 192, 0.2)",
-          "rgba(153, 102, 255, 0.2)"
-        ],//end backgroundColor array
-        borderColor: [
-            "rgba(255, 99, 132, 1)",
-            "rgba(54, 162, 235, 1)",
-            "rgba(255, 206, 86, 1)",
-            "rgba(75, 192, 192, 1)",
-            "rgba(153, 102, 255, 1)"
-            ],
-            borderWidth: 1
-        
-      }//end datasets
-
-    ]//end datasets array
-
-    
-    
-  }//end data
-
+    }//end datasets
+  ]//end datasets array. Don't understand. Is this an object in an array? Argh!
+},//end myChartLine
+options: {
+    legend: {
+      display: false
+    },
   
- 
-});//end object
+    scales: {
+        yAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    }
+}
+});
 
-
-let myChartPie = new Chart(ctxTwo, {
-    type: 'pie',
+let myChartBar = new Chart(ctxTwo, {
+    type: 'bar',
     data: {
-        labels: frameworks,
-        datasets: [
+          labels: ["S", "M", "T", "W", "T", "F", "S"],
+          datasets: [
           {
-            label: "Github Stars",
-            data: stars,
-            backgroundColor: [
-              "rgba(255, 99, 132, 0.2)",
-              "rgba(54, 162, 235, 0.2)",
-              "rgba(255, 206, 86, 0.2)",
-              "rgba(75, 192, 192, 0.2)",
-              "rgba(153, 102, 255, 0.2)"
-            ],//end backgroundColor array
-            borderColor: [
-                "rgba(255, 99, 132, 1)",
-                "rgba(54, 162, 235, 1)",
-                "rgba(255, 206, 86, 1)",
-                "rgba(75, 192, 192, 1)",
-                "rgba(153, 102, 255, 1)"
-                ],
-                borderWidth: 1
+            data: [70, 110, 175, 125, 225, 200, 105],
+            backgroundColor: "midnightblue"
             
-          }//end datasets
-    
-        ]//end datasets array
-    
-        
-        
-      }//end data
-    
-      
-     
-    });//end object
+           }//end datasets
+  ]//end datasets array. 
+},//end myChartLine
+options: {
+  legend: {
+    display: false
+  },
+    scales: {
+        yAxes: [{
+            ticks: {
+                max: 250,
+                min: 0,
+                stepSize: 50
+            }
+        }]
+    }
+}
+});
 
 
-    let myChartLine = new Chart(ctxThree, {
-        type: 'line',
+    
+
+
+    let myChartDoughnut = new Chart(ctxThree, {
+        type: 'doughnut',
         data: {
-            labels: frameworks,
+            labels: ["desktop", "tablet", "phones"],
             datasets: [
               {
-                label: "Github Stars",
-                data: stars,
-                backgroundColor: 
-                  "rgba(255, 99, 132, 0.2)",
+                
+                data: [220, 70, 70],
+                backgroundColor: ["midnightBlue", "green", "lightblue"],
                 borderColor: 
                     "rgba(255, 99, 132, 1)",
                 borderWidth: 1,
@@ -98,16 +84,27 @@ let myChartPie = new Chart(ctxTwo, {
                 lineTension: 0 
                 
               }//end datasets
-        
             ]//end datasets array
-        
-            
-            
-          }//end data
-        
-          
-         
-        });//end object
+          },//end myChartDoughnut
+          options: {
+            legend: {
+              position: "right"
+            },
+              scales: {
+                xAxes: [{
+                  gridLines: {
+                     display: false
+                  }
+               }],
+               yAxes: [{
+                  gridLines: {
+                     display: false
+                  }
+               }]
+              }
+          }
+          });
+      
 
 
 
