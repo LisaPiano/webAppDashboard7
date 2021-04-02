@@ -76,12 +76,8 @@ options: {
               {
                 
                 data: [220, 70, 70],
-                backgroundColor: ["midnightBlue", "green", "lightblue"],
-                borderColor: 
-                    "rgba(255, 99, 132, 1)",
-                borderWidth: 1,
-                fill: false,
-                lineTension: 0 
+                backgroundColor: ["midnightBlue", "green", "lightblue"]
+               
                 
               }//end datasets
             ]//end datasets array
@@ -92,11 +88,13 @@ options: {
             },
               scales: {
                 xAxes: [{
+                  display: false,
                   gridLines: {
                      display: false
                   }
                }],
                yAxes: [{
+                 display: false,
                   gridLines: {
                      display: false
                   }
