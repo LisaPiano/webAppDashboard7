@@ -71,7 +71,7 @@ options: {
     let myChartDoughnut = new Chart(ctxThree, {
         type: 'doughnut',
         data: {
-            labels: ["desktop", "tablet", "phones"],
+            labels: ["Desktop", "Tablet", "Phones"],
             datasets: [
               {
                 

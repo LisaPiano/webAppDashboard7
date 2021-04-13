@@ -7,7 +7,6 @@
         <link rel = "stylesheet" href = "css/style.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-        
     </head>
 
 
@@ -84,6 +83,7 @@
                     <p>Alert: You have unread messages</p>
                     <p class="p">X</p>
                 </div>
+        
            
 <!-- 
             --------------------------------------
@@ -293,39 +293,43 @@
 <section class="message-user-and settings">
     <h3>MESSAGE USER</h3>
         <div class="messageUserSettingsForm">
-
     <form class="widget-container">
-    <div class="search">
-        <input type="search" placeholder="Search for User">
+    <div class="searchAndMessage">
+        <input class="searchForUser" type="search" placeholder="Search for User">
     </div>
     <div class="textarea">
-        <input type="textarea" placeholder="Message for User">
+        <input type="textarea" class="messageForUser" placeholder="Message for User">
     </div>
     <div class="sendButton">
         <button class="send">SEND</button>
     </div>
 </form>
+<hr>
 <!--  End the MESSAGE USER section -->
 
 <!--  Begin the SETTINGS section -->
+<div class="settings">
     <h3>SETTINGS</h3>
-    
-        <!-- PART WITH TOGGLE SWITCHES -->
     <div class="toggleOnOff">
         <p>Send Email Notifications</p>
-        <br><br>
-        <input type="checkbox" id="switch" class="checkboxOne" />
-        <label for="switch" class="toggle">
-            <p>OFF       ON</p>
-        </label>
-        <p>Set Profile to Public</p>
-        <br><br>
-        <input type="checkbox" id="switch" class="checkboxTwo" />
-        <label for="switch" class="toggle">
-            <p>OFF       ON</p>
-        </label>
+        <div class="switch">
+            <input id="cmn-toggle-1" class="cmn-toggle cmn-toggle-round" type="checkbox">
+            <label for="cmn-toggle-1"><span class="on">ON</span><span class="off">OFF</span></label>
+          </div>
+           
+          <p>Set Profile to Public</p>
+          <div class="switch">
+            <input id="cmn-toggle-2" class="cmn-toggle cmn-toggle-round" type="checkbox">
+            <label for="cmn-toggle-2">ON</label>
+          </div>
+        </div>
     </div>
-   <!-- END PART WITH TOGGLE SWITCHES -->
+           
+         
+   
+   
+   
+    <!-- END PART WITH TOGGLE SWITCHES -->
     <option disabled selected>Select a Timezone</option>
     <option>Eastern</option>
     <option>Mountain</option>
