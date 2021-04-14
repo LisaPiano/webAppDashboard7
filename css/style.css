@@ -74,7 +74,7 @@ OVERALL STYLES
   /* ________________________________NAV_____________________________  */
   
   .nav {
-    grid-area: "nav";
+    grid-area: nav;
     height: 100px; 
     display: grid;
     padding: 35px;  
@@ -96,7 +96,7 @@ OVERALL STYLES
   /* ___________________________MAIN_____________ */
 
   .main {
-    grid-area: "main";
+    grid-area: main;
     font-family: 'Roboto', sans-serif;
   }
 /* ___________________________Dashboard and Search_____________ */
@@ -402,4 +402,106 @@ padding-left: 20px;
 
 .button-disabled {
   background-color:  grey;
+}
+
+/* _______________MEDIA QUERIES___________ */
+
+@media only screen and (min-width: 321px) and (max-width: 768px) {
+  .grid-container {
+    display: grid; 
+    grid-template-columns: 15% 85%;
+    grid-template-areas: 
+    "header header"
+    "nav main"
+  }
+
+  .header {
+    grid-area: header;
+    display: grid;
+    height: 100px; 
+    background-color: rgb(66, 103, 178);
+    opacity: 100%;
+    color: white; 
+    grid-template-columns: 70% 14% 7% 9%;
+    grid-template-rows: auto; 
+  }
+  .nav {
+    grid-area: nav;
+    display: grid;
+    height: 100%; 
+    background-color: midnightblue;
+    opacity: 80%;
+    grid-template-columns: 100%;
+    grid-template-rows: 3% 3% 3% 91%; 
+  }
+.line-icon {
+  padding-left: 40px; 
+}
+
+.home-icon,
+.bar-icon,
+.members-icon,
+.settings-icon {
+  transform: translateX(-40px); 
+}
+
+.first-traffic-chart {
+  display: grid; 
+  grid-template-columns: 40% 60%; 
+}
+.traffic-nav {
+  padding-top: 22px; 
+} 
+
+.trafficAndMobile {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding: 30px; 
+}
+.wrapperBar,
+.wrapperDoughnut {
+  border: 1px solid grey;
+}
+
+.social-container{
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    gap: 2px; 
+    padding-left: 15px; 
+}
+
+.facebook,
+.instagram,
+.twitter {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+    
+    padding: 0px;
+   
+    margin:0; 
+    padding-right: 0; 
+}
+.social-text p,
+.social-text h4 {
+  font-size:14px;
+  padding-top: 8px; 
+}
+.social-image {
+  height: 60px; 
+  width: 62px; 
+  padding-left: 5px;
+  padding-top: 23px;
+  margin-left: 12px; 
+  margin-right: 10px; 
+}
+#instagram, 
+#facebook,
+#twitter {
+  transform: translateY(-15px); 
+  padding-left: 10px; 
+  
+}
+}
+
 }
