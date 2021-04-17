@@ -499,7 +499,7 @@ padding-left: 20px;
 }
 .search-placeholder {
   margin-left: 7px; 
-  width: 124px; 
+  width: 100%; 
 }
 
 .first-traffic-chart {
@@ -584,53 +584,71 @@ padding-left: 20px;
   height: 42px;  
 }
 
+.memPhoto {
+  padding-left: 10px; 
+}
 
-.newMembersAndRecentActivity {
-  display: grid; 
-  grid-template-columns: 50% 50%; 
-  grid-template-rows: 120px;
-  grid-template-areas:
-  "victoriaOne victoriaTwo"
-  "daleOne daleTwo"
-  "dawnOne dawnTwo"
-  "danOne danTwo";
+.date {
+  padding-top: 40px;
+}
+
+.memberTextOne,
+.memberText {
+  padding-left: 40px; 
   text-align: left; 
+  padding-top: 20px; 
+}
+
+.memberText {
+  width: 450px;  
 }
 
 .victoriaOne {
   grid-area: victoriaOne; 
   display: grid;
-  grid-template-columns: 30% 70%;
+  grid-template-columns: 7% 70% 23%;
   }
 
 .victoriaTwo {
   grid-area: victoriaTwo; 
   display: grid;
-  grid-template-columns: 30% 70%;
+  grid-template-columns: 10% 90%;
 }
 
 .daleOne {
   grid-area: daleOne;
+  display: grid;
+  grid-template-columns: 7% 70% 23%;
 }
 
 .daleTwo {
   grid-area: daleTwo;
+  display: grid;
+  grid-template-columns: 10% 90%;
 }
 
 .dawnOne {
   grid-area: dawnOne;
+  display: grid;
+  grid-template-columns: 7% 70% 23%;
 }
 
 .dawnTwo {
   grid-area: dawnTwo;
+  display: grid;
+  grid-template-columns: 10% 90%;
 }
 
 .danOne {
   grid-area: danOne;
+  display: grid;
+  grid-template-columns: 7% 70% 23%;
 }
 
 .danTwo {
   grid-area: danTwo; 
+  display: grid;
+  grid-template-columns: 10% 90%;
 } 
 
 .memberPhoto {
@@ -644,7 +662,7 @@ padding-left: 20px;
   gap: 37px; 
 }
 .mem {
-  border: 1px solid lightgray; 
+  border-bottom: 1px solid lightgray; 
 }
 
 
