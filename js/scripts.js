@@ -1,4 +1,4 @@
-console.log('hi');
+
 
 let ctxOne = document.getElementById("myChartLine").getContext("2d");
 let ctxTwo = document.getElementById("myChartBar").getContext("2d");
@@ -103,7 +103,24 @@ options: {
           }
           });
       
+//_______________________________________________________________________
+//alert
+//_________________________________________________________________________
 
+let x = document.querySelector(".p");
+let alert = document.querySelector(".alert");
 
+x.addEventListener("click", (e) => {
+  alert.style.display = "none";
+});
 
+//_______________________________________________________________________
+//notification icon
+//_________________________________________________________________________
 
+let bell = document.querySelector(".bell-icon");
+let choose = document.querySelector(".choose");
+bell.addEventListener("click", (e) => {
+  choose.style.display = "block"; 
+  window.alert("You have one new notification. Please choose what you would like to do.");
+});

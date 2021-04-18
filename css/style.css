@@ -39,18 +39,32 @@ OVERALL STYLES
     background-color: rgb(66, 103, 178);
     opacity: 100%;
     color: white; 
-    grid-template-columns: 33% 20% 4% 14% 30%;
+    grid-template-columns: 10% 10% 10% 37% 13% 29%;
     grid-template-rows: auto; 
   }
   .webapp {
     padding-top: 50px; 
     padding-left: 10px; 
-    font-size: 10px; 
+    font-size: 8px; 
   }
- 
+ .circle {
+   border-radius: 50%;
+   background-color: greenyellow; 
+   height: 10px; 
+   width: 10px; 
+   margin-top: 35px; 
+   margin-left: 64px; 
+ }
   .bell-icon {
     padding-top: 45px; 
     padding-left: 10px; 
+  }
+
+  .choose {
+    display: none; 
+  }
+  .choose::placeholder {
+    font-size: 4px; 
   }
     .first-face img {
     border-radius: 50%; 
@@ -63,16 +77,14 @@ OVERALL STYLES
     background-color: white;  
     width: 1px; 
     margin-top: 30px; 
-    margin-left: 5px; 
+    margin-left: 16px; 
     opacity: 60%; 
     height: 50px; 
     padding-top: 40px;
   }
   .student-name{
-    font-size: 8px; 
-     padding-top: 55px; 
-     padding-right: 20px; 
-    
+    font-size: 6px; 
+     padding-top: 55px;
   }
 
   /* ________________________________NAV_____________________________  */
@@ -94,6 +106,7 @@ OVERALL STYLES
   .members-icon,
   .settings-icon {
     fill: white; 
+    padding-top: 45px; 
     
   }
 
@@ -120,7 +133,7 @@ OVERALL STYLES
 }
 .search-placeholder {
   height: 40px; 
-  width: 100%; 
+  width: 99%; 
   padding-left: 50px; 
   padding-top: 20px; 
   padding-bottom: 35px; 
@@ -165,6 +178,7 @@ OVERALL STYLES
 .wrapperLine {
   display: grid; 
   grid-template-columns: 100%; 
+  align-items: center; 
 }
 .traffic-nav-hourly {
   margin-left: 20px; 
@@ -236,9 +250,10 @@ OVERALL STYLES
 .newMembersAndRecentActivityOne {
   display: grid; 
   grid-template-columns: 100%; 
-  grid-template-rows: repeat(4, 170px);
+  grid-template-rows: repeat (5, 170px);
   text-align: center; 
   grid-template-areas:
+  "newMembers"
   "victoriaOne"
   "daleOne"
   "dawnOne"
@@ -247,16 +262,22 @@ OVERALL STYLES
 .newMembersAndRecentActivityTwo {
   display: grid; 
   grid-template-columns: 100%; 
-  grid-template-rows: repeat(4, 170px);
+  grid-template-rows: 8% repeat(4, 170px);
   text-align: center; 
   grid-template-areas:
+  "recentActivity"
   "victoriaTwo"
   "daleTwo"
   "dawnTwo"
   "danTwo"
 }
 
-
+.newMembers {
+  grid-area: newMembers; 
+}
+.recentActivity {
+  grid-area: recentActivity;
+}
 .victoriaOne {
   grid-area: victoriaOne; 
 }
@@ -349,8 +370,8 @@ a {
 .toggleOnOff {
   display: grid;
   grid-template-columns: 75% 25%; 
-  gridtemplate-rows: 50% 50%;
-  gap: 30px; 
+  grid-template-rows: 50px 50px;
+  gap: 15px; 
   width: 60%; 
 }
 
@@ -458,7 +479,9 @@ padding-left: 20px;
 
 /* _______________MEDIA QUERIES___________ */
 
-@media only screen and (min-width: 321px) and (max-width: 1023px ){
+/* _______________for 768px___________ */
+
+@media only screen and (min-width: 321px){
   .grid-container {
     display: grid; 
     grid-template-columns: 18% auto;
@@ -474,9 +497,12 @@ padding-left: 20px;
     background-color: rgb(66, 103, 178);
     opacity: 100%;
     color: white; 
-    grid-template-columns: 68% 14% 5% 13%;
+    grid-template-columns: 20% 10% 10% 40% 8% 12%;
     grid-template-rows: auto; 
     padding-right: 15px; 
+  }
+  .circle {
+    margin-left: 107px; 
   }
   .nav {
     grid-area: nav;
@@ -485,7 +511,7 @@ padding-left: 20px;
     background-color: midnightblue;
     opacity: 80%;
     grid-template-columns: 100%;
-    grid-template-rows: 3% 3% 3% 91%; 
+    grid-template-rows: 5% 5% 5% 95%; 
   }
 .line-icon {
   padding-left: 40px; 
@@ -499,12 +525,15 @@ padding-left: 20px;
 }
 .search-placeholder {
   margin-left: 7px; 
-  width: 100%; 
+  width: 99%; 
 }
 
 .first-traffic-chart {
   display: grid; 
-  grid-template-columns: 40% 60%; 
+  grid-template-columns: 100%; 
+  width: 600px; 
+  align-self: center; 
+  padding-left: 350px; 
 }
 
 .traffic-nav {
@@ -517,7 +546,7 @@ padding-left: 20px;
 } 
 .trafficAndMobile {
   display: grid;
-  grid-template-columns: 200px 200px;
+  grid-template-columns: 50% 50%;
   padding: 20px; 
 }
 
@@ -526,16 +555,14 @@ padding-left: 20px;
   padding-left: 0; 
 }
 
-/* #myChartLine {
-  width: 494px;
-  height: 235px; 
-} */
+
 .myChartBar {
   width: 300px; 
 }
 .wrapperBar,
 .wrapperDoughnut {
   border: 1px solid grey;
+  align-self: center; 
 }
 
 .social-container{
@@ -584,6 +611,10 @@ padding-left: 20px;
   height: 42px;  
 }
 
+.newMembersAndRecentActivityTwo {
+  grid-template-rows: 14% repeat(4, 99px);
+}
+
 .memPhoto {
   padding-left: 10px; 
 }
@@ -613,6 +644,7 @@ padding-left: 20px;
   grid-area: victoriaTwo; 
   display: grid;
   grid-template-columns: 10% 90%;
+  grid-row: auto; 
 }
 
 .daleOne {
@@ -665,7 +697,56 @@ padding-left: 20px;
   border-bottom: 1px solid lightgray; 
 }
 
+}
 
+/* _______________for 1024px__________ */
 
+@media only screen and (min-width: 769px){
+  .circle {
+    margin-left: 150px;
+  }
 
+  .wrapperMembersAndActivity {
+    display: grid; 
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto; 
+    grid-template-areas:
+    "newMembersAndRecentActivityOne newMembersAndRecentActivityTwo"
+  }
+
+  .newMembersAndRecentActivityOne {
+    grid-area: newMembersAndRecentActivityOne;
+    .newMembersAndRecentActivityTwo {
+      grid-template-rows:  repeat(5, 145px);
+    }
+  }
+  .newMembersAndRecentActivityTwo {
+    grid-area: newMembersAndRecentActivityTwo;
+    grid-template-rows:  repeat(5, 145px);
+  }
+
+  .mem {
+    padding-bottom: 0px; 
+    padding-top: 7px; 
+    border: 1px solid lightgray; 
+  }
+  .recentActivity,
+  .newMembers {
+    border: 1px solid lightgray; 
+  }
+
+  .messageUserSettingsForm {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 300px; 
+    border-right: 1px solid lightgray; 
+  }
+  .textarea {
+    padding-bottom: 35px; 
+  }
+
+  .rightCol {
+    border-right: 1px solid lightgray;
+  }
+ 
 }
