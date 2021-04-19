@@ -39,12 +39,12 @@ OVERALL STYLES
     background-color: rgb(66, 103, 178);
     opacity: 100%;
     color: white; 
-    grid-template-columns: 10% 10% 10% 37% 13% 29%;
+    grid-template-columns:  18% 10% 42% 3% 7% 14% 2%;
     grid-template-rows: auto; 
   }
   .webapp {
     padding-top: 50px; 
-    padding-left: 10px; 
+    padding-left: 2px; 
     font-size: 8px; 
   }
  .circle {
@@ -53,31 +53,45 @@ OVERALL STYLES
    height: 10px; 
    width: 10px; 
    margin-top: 35px; 
-   margin-left: 64px; 
+   margin-left: 70px; 
  }
   .bell-icon {
+    display: block; 
     padding-top: 45px; 
-    padding-left: 10px; 
+    padding-left: 2px; 
   }
+
+  .bell {
+    display: block; 
+    transition: transform 2s; 
+  }
+
+  .bell:hover {
+    transform: rotate(90deg);
+  }
+
 
   .choose {
     display: none; 
   }
-  .choose::placeholder {
-    font-size: 4px; 
-  }
+
     .first-face img {
     border-radius: 50%; 
     border: black; 
     height: 40px;
     width: 40px; 
     margin-top: 40px; 
+    transition: transform 2s; 
+  }
+
+  .first-face img:hover {
+    transform: rotate(90deg);
   }
   .line {
     background-color: white;  
     width: 1px; 
     margin-top: 30px; 
-    margin-left: 16px; 
+    margin-left: 135px; 
     opacity: 60%; 
     height: 50px; 
     padding-top: 40px;
@@ -85,6 +99,7 @@ OVERALL STYLES
   .student-name{
     font-size: 6px; 
      padding-top: 55px;
+     padding-left: 20px; 
   }
 
   /* ________________________________NAV_____________________________  */
@@ -182,13 +197,8 @@ OVERALL STYLES
 }
 .traffic-nav-hourly {
   margin-left: 20px; 
-  border: solid 1px #0ac50a9c; 
-    background-color: #0ac50a9c; 
-  opacity: 85%; 
-  color: white; 
-  border-radius: 24px; 
- 
 }
+
 
 
    
@@ -497,12 +507,16 @@ padding-left: 20px;
     background-color: rgb(66, 103, 178);
     opacity: 100%;
     color: white; 
-    grid-template-columns: 20% 10% 10% 40% 8% 12%;
+    grid-template-columns:  11% 10% 19% 21% 13% 12% 10%;
     grid-template-rows: auto; 
     padding-right: 15px; 
   }
   .circle {
     margin-left: 107px; 
+  }
+
+  .webapp {
+    padding-left: 10px; 
   }
   .nav {
     grid-area: nav;
@@ -514,7 +528,7 @@ padding-left: 20px;
     grid-template-rows: 5% 5% 5% 95%; 
   }
 .line-icon {
-  padding-left: 40px; 
+  padding-left: 258px; 
 }
 
 .home-icon,
