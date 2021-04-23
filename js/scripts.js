@@ -316,11 +316,14 @@ let message = document.querySelector(".messageForUser");
 var conversation = message.innerHTML; 
 
 send.addEventListener("click", (e) => {
+
+  if (message.value === "" && (search.value === "Victoria Chambers" || search.value === "Dale Byrd" || search.value === "Dawn Wood" || search.value === "Dan Oliver")) {
+    window.alert("Please be sure to submit a message to the user before sending");
+  } 
+
    if (search.value === "" && message.value === "")
-    window.alert("Oh no!");
-  // if (search.value === "") {
-  //   window.alert("Please be sure to submit the user information before sending");
-  // }
+    window.alert("Please submit both the user name and a message before pressing send.");
+ 
   else if (search.value === "Victoria Chambers" || search.value === "Dale Byrd" || search.value === "Dawn Wood" || search.value === "Dan Oliver"){
     localStorage.name = search.value; 
     search.setAttribute = localStorage.name; 
@@ -329,9 +332,7 @@ send.addEventListener("click", (e) => {
     window.alert("The appropriate user name was not submitted. Please try again!");
   };
   
-  if (send.value && message.value === "") {
-    window.alert("Please be sure to submit a message to the user before sending");
-  } 
+  
 
  
 });
