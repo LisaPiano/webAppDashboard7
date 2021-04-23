@@ -33,20 +33,21 @@ OVERALL STYLES
 /* ---------------------HEADER---------------------------- */
   .header {
     grid-area: header;
-    display: grid;
+     display: grid; 
     font-family: 'Roboto', sans-serif;
     height: 100px; 
     background-color: rgb(66, 103, 178);
     opacity: 100%;
     color: white; 
     grid-template-columns:  18% 10% 42% 3% 7% 14% 2%;
-    grid-template-rows: auto; 
+    grid-template-rows: auto;  
   }
   .webapp {
     padding-top: 50px; 
     padding-left: 2px; 
     font-size: 8px; 
   }
+  
  .circle {
    border-radius: 50%;
    background-color: greenyellow; 
@@ -62,14 +63,14 @@ OVERALL STYLES
   }
 
   .bell {
-    display: block; 
-    transition: transform 2s; 
+    fill: red;
   }
-
   .bell:hover {
-    transform: rotate(90deg);
+    fill: blue; 
   }
-
+  
+  
+  
 
   .choose {
     display: none; 

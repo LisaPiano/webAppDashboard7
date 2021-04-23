@@ -4,37 +4,37 @@ let ctxOneHourly = document.getElementById("myChartLineHourly").getContext("2d")
 let ctxTwo = document.getElementById("myChartBar").getContext("2d");
 let ctxThree = document.getElementById("myChartDoughnut").getContext("2d");
 
-// let myChartLineHourly = new Chart(ctxOneHourly, {
-//   type: "line", 
-//   data: { 
-//           labels: ["16/22", "23-29", "30-05", "6-12", "13-19", "20-26", "27-3", "4-10", "11-17", "18-24", "25-31"],
-//           datasets: [
-//             {
-//               label: "Traffic",
-//               data: [500, 1200, 1000, 2000, 1500, 1800, 1200, 1800, 2300, 1500, 2500],
-//               backgroundColor: 
-//               "#cdcdcd",
-//               borderColor: 
-//               "#778899",
-//             borderWidth: .5
+let myChartLineHourly = new Chart(ctxOneHourly, {
+  type: "line", 
+  data: { 
+          labels: ["16/22", "23-29", "30-05", "6-12", "13-19", "20-26", "27-3", "4-10", "11-17", "18-24", "25-31"],
+          datasets: [
+            {
+              label: "Traffic",
+              data: [500, 1200, 1000, 2000, 1500, 1800, 1200, 1800, 2300, 1500, 2500],
+              backgroundColor: 
+              "#cdcdcd",
+              borderColor: 
+              "#778899",
+            borderWidth: .5
 
-//     }//end datasets
-//   ]//end datasets array. Don't understand. Is this an object in an array? Argh!
-// },//end myChartLine
-// options: {
-//     legend: {
-//       display: false
-//     },
+    }//end datasets
+  ]//end datasets array. Don't understand. Is this an object in an array? Argh!
+},//end myChartLine
+options: {
+    legend: {
+      display: false
+    },
   
-//     scales: {
-//         yAxes: [{
-//             ticks: {
-//                 beginAtZero: true
-//             }
-//         }]
-//     }
-// }
-// });
+    scales: {
+        yAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    }
+}
+});
 
 let myChartBar = new Chart(ctxTwo, {
     type: 'bar',
@@ -127,11 +127,11 @@ daily.addEventListener('click', (e) => {
   let myChartLineHourly = new Chart(ctxOneHourly, {
     type: "line", 
     data: { 
-            labels: ["16/22", "23-29", "30-05", "6-12", "13-19", "20-26", "27-3", "4-10", "11-17", "18-24", "25-31"],
+            labels: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
             datasets: [
               {
                 label: "Traffic",
-                data: [500, 1200, 1000, 2000, 1500, 1800, 1200, 1800, 2300, 1500, 2500],
+                data: [2500, 2000, 1000, 500, 2500, 50, 2000],
                 backgroundColor: 
                 "#cdcdcd",
                 borderColor: 
@@ -169,11 +169,11 @@ weekly.addEventListener('click', (e) => {
   let myChartLineHourly = new Chart(ctxOneHourly, {
     type: "line", 
     data: { 
-            labels: ["16/22", "23-29", "30-05", "6-12", "13-19", "20-26", "27-3", "4-10", "11-17", "18-24", "25-31"],
+            labels: ["Week 1", "Week 2", "Week 3", "Week 4"],
             datasets: [
               {
                 label: "Traffic",
-                data: [500, 1200, 1000, 2000, 1500, 1800, 1200, 1800, 2300, 1500, 2500],
+                data: [500, 2500, 500, 2500],
                 backgroundColor: 
                 "#cdcdcd",
                 borderColor: 
@@ -211,11 +211,11 @@ monthly.addEventListener('click', (e) => {
   let myChartLineHourly = new Chart(ctxOneHourly, {
     type: "line", 
     data: { 
-            labels: ["16/22", "23-29", "30-05", "6-12", "13-19", "20-26", "27-3", "4-10", "11-17", "18-24", "25-31"],
+            labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
             datasets: [
               {
                 label: "Traffic",
-                data: [500, 1200, 1000, 2000, 1500, 1800, 1200, 1800, 2300, 1500, 2500],
+                data: [500, 1000, 1500, 2000, 2500, 2000, 1500, 1000, 500, 1000, 2500, 0],
                 backgroundColor: 
                 "#cdcdcd",
                 borderColor: 
@@ -302,9 +302,9 @@ bell.addEventListener("click", (e) => {
   circle.style.display = "none";
 });
 
-bell.addEventListener ('mouseover', (e) => {
-  bell.style.fill = "red";
-});
+// bell.addEventListener ('mouseover', (e) => {
+//   bell.style.fill = "red";
+// });
 
 //_______________________________________________________________________
 //Search for User--local Storage and autofill
@@ -316,13 +316,24 @@ let message = document.querySelector(".messageForUser");
 var conversation = message.innerHTML; 
 
 send.addEventListener("click", (e) => {
-  if (search.value === "Victoria Chambers" || search.value === "Dale Byrd" || search.value === "Dawn Wood" || search.value === "Dan Oliver"){
+   if (search.value === "" && message.value === "")
+    window.alert("Oh no!");
+  // if (search.value === "") {
+  //   window.alert("Please be sure to submit the user information before sending");
+  // }
+  else if (search.value === "Victoria Chambers" || search.value === "Dale Byrd" || search.value === "Dawn Wood" || search.value === "Dan Oliver"){
     localStorage.name = search.value; 
     search.setAttribute = localStorage.name; 
     localStorage.conversation = message.value; 
   } else {
-    window.alert("No member exists by this name. Please try again!");
+    window.alert("The appropriate user name was not submitted. Please try again!");
   };
+  
+  if (send.value && message.value === "") {
+    window.alert("Please be sure to submit a message to the user before sending");
+  } 
+
+ 
 });
 console.log(localStorage.name);
 console.log(localStorage.conversation);
@@ -344,10 +355,11 @@ console.log(localStorage.conversation);
           search.value = ""; 
           search.value = "Dawn Wood";
       };
+
+      
+      
     });//End Event Listener 
    
   //_______________________________________________________________________
-//Local Storage for Textarea
+//Both Search and Message must be filled in
 //_________________________________________________________________________
-
-
