@@ -5,9 +5,6 @@
     
   }
 
- 
-  
-  
 /* 
 OVERALL STYLES
   _____________________________________________________
@@ -21,6 +18,7 @@ OVERALL STYLES
     padding-top: 30px; 
     text-align: left; 
   }
+
   .grid-container {
     display: grid; 
     grid-template-columns: 100%;
@@ -33,7 +31,7 @@ OVERALL STYLES
 /* ---------------------HEADER---------------------------- */
   .header {
     grid-area: header;
-     display: grid; 
+    display: grid; 
     font-family: 'Roboto', sans-serif;
     height: 100px; 
     background-color: rgb(66, 103, 178);
@@ -56,6 +54,7 @@ OVERALL STYLES
    margin-top: 35px; 
    margin-left: 70px; 
  }
+
   .bell-icon {
     display: block; 
     padding-top: 45px; 
@@ -63,26 +62,26 @@ OVERALL STYLES
   }
 
   .bell {
-    fill: red;
+    displaly: block; 
+    transition: transform 2s ease-out;
   }
-  .bell:hover {
-    fill: blue; 
+
+  .bell-icon:hover {
+    fill: red; 
+    tranform: rotate(44deg);
   }
-  
-  
-  
 
   .choose {
     display: none; 
   }
 
     .first-face img {
-    border-radius: 50%; 
-    border: black; 
-    height: 40px;
-    width: 40px; 
-    margin-top: 40px; 
-    transition: transform 2s; 
+      border-radius: 50%; 
+      border: black; 
+      height: 40px;
+      width: 40px; 
+      margin-top: 40px; 
+      transition: transform 2s; 
   }
 
   .first-face img:hover {
@@ -123,7 +122,6 @@ OVERALL STYLES
   .settings-icon {
     fill: white; 
     padding-top: 45px; 
-    
   }
 
   /* ___________________________MAIN_____________ */
@@ -147,6 +145,7 @@ OVERALL STYLES
 .search {
   padding-left: 80px; 
 }
+
 .search-placeholder {
   height: 40px; 
   width: 99%; 
@@ -173,6 +172,7 @@ OVERALL STYLES
   border-radius: 12px; 
   opacity: 70%; 
 }
+
 .p {
   text-align: right; 
 }
@@ -186,23 +186,31 @@ OVERALL STYLES
   grid-template-rows: 40px; 
   list-style-type: none; 
 } 
+
+.decoration {
+background-color: rgba(10, 197, 10, 0.61);
+border: 1px solid rgba(10, 197, 10, 0.61);
+opacity: 0.85;
+color: white;
+border-radius: 24px;
+}
+
 .traffic-nav li {
   padding-top: 8px; 
   text-align: center; 
   font-weight: bold;
 }
+
 .wrapperLine {
   display: grid; 
   grid-template-columns: 100%; 
   align-items: center; 
 }
+
 .traffic-nav-hourly {
   margin-left: 20px; 
 }
-
-
-
-   
+ 
 .wrapperBar,
 .wrapperDoughnut,
 .wrapperLine {
@@ -211,6 +219,7 @@ OVERALL STYLES
     max-width: 300px;
     margin: 0 auto;
 }
+
 .wrapperLine {
   padding-left: 10px; 
 }
@@ -231,10 +240,12 @@ OVERALL STYLES
     margin: 12px; 
     padding-right: 72px; 
 }
+
 .social-text h4{
   color:  rgb(104, 129, 238);
   font-size: 20px;
 }
+
 .social-text p {
   font-size: 40px;
 }
@@ -247,6 +258,7 @@ OVERALL STYLES
   padding-left: 18px; 
   padding-top: 18px;
 }
+
 #instagram, 
 #facebook,
 #twitter {
@@ -270,6 +282,7 @@ OVERALL STYLES
   "dawnOne"
   "danOne"
 }
+
 .newMembersAndRecentActivityTwo {
   display: grid; 
   grid-template-columns: 100%; 
@@ -286,39 +299,48 @@ OVERALL STYLES
 .newMembers {
   grid-area: newMembers; 
 }
+
 .recentActivity {
   grid-area: recentActivity;
 }
+
 .victoriaOne {
   grid-area: victoriaOne; 
 }
+
 .victoriaTwo {
   grid-area: victoriaTwo; 
 }
+
 .daleOne {
   grid-area: daleOne;
 }
+
 .daleTwo {
   grid-area: daleTwo;
 }
+
 .dawnOne {
   grid-area: dawnOne;
 }
+
 .dawnTwo {
   grid-area: dawnTwo;
 }
+
 .danOne {
   grid-area: danOne;
 }
+
 .danTwo {
   grid-area: danTwo; 
 } 
-
 
 .memPhoto,
 .memberText {
   justify-content: center; 
 }
+
 .memberPhoto {
   border-radius: 50%; 
   width: 60px; 
@@ -352,20 +374,24 @@ a {
   padding-left: 20px; 
   border: 1px solid gray; 
 }
+
 .searchForUser {
   background-color: #e0e0e0; 
   opacity: 50%; 
 }
+
 .searchForUser,
 .send {
   height: 40px; 
 }
+
 .messageForUser {
   height: 100px; 
   background-color: #e0e0e0; 
   opacity: 50%; 
   padding-bottom: 50px; 
 }
+
 .send {
   background-color: rgb(66, 103, 178);
   color: white; 
@@ -384,6 +410,7 @@ a {
   grid-template-rows: 50px 50px;
   gap: 15px; 
   width: 60%; 
+  padding-left: 20px; 
 }
 
 .off {
@@ -395,6 +422,7 @@ a {
   margin-left: -9999px;
   visibility: hidden;
 }
+
 .cmn-toggle + label {
   display: block;
   position: relative;
@@ -402,6 +430,7 @@ a {
   outline: none;
   user-select: none;
 }
+
 input.cmn-toggle-round + label {
   padding: 20px;
   color: #fff; 
@@ -411,6 +440,7 @@ input.cmn-toggle-round + label {
   border-radius: 60px;
   border: 2px solid grey; 
 }
+
 input.cmn-toggle-round + label:before,
 input.cmn-toggle-round + label:after {
   display: block;
@@ -421,6 +451,7 @@ input.cmn-toggle-round + label:after {
   content: "OFF";
   padding-top: 20px; 
 }
+
 input.cmn-toggle-round + label:before {
   right: 1px;
   background-color:  rgb(104, 129, 238);
@@ -428,6 +459,7 @@ input.cmn-toggle-round + label:before {
   transition: background 0.4s;
   padding-left: 10px; 
 }
+
 input.cmn-toggle-round + label:after {
   width: 53px;
   height: 28px; 
@@ -437,16 +469,15 @@ input.cmn-toggle-round + label:after {
   transition: margin 0.4s;
   border: 2px solid grey; 
 }
+
 input.cmn-toggle-round:checked + label:before {
   background-color: rgb(104, 129, 238);
 }
+
 input.cmn-toggle-round:checked + label:after {
   margin-left: -60px;
 }
 
-.toggleOnOff {
-  padding-left: 20px; 
-}
 
 /* _________SELECT_____ */
 
@@ -459,7 +490,6 @@ background-color: #e0e0e0;
 padding-right: 30px; 
 padding-left: 20px; 
 }
-
 
 .settings-button {
   display: grid; 
@@ -528,6 +558,7 @@ padding-left: 20px;
     grid-template-columns: 100%;
     grid-template-rows: 5% 5% 5% 95%; 
   }
+
 .line-icon {
   padding-left: 258px; 
 }
@@ -538,18 +569,24 @@ padding-left: 20px;
 .settings-icon {
   transform: translateX(-40px); 
 }
+
 .search-placeholder {
   margin-left: 7px; 
   width: 99%; 
 }
 
 .first-traffic-chart {
+  width: 100%;
+  height; 200px; 
+}
+
+/* .first-traffic-chart {
   display: grid; 
   grid-template-columns: 100%; 
   width: 600px; 
   align-self: center; 
   padding-left: 350px; 
-}
+} */
 
 .traffic-nav {
   padding-top: 22px; 
@@ -559,6 +596,7 @@ padding-left: 20px;
   list-style-type: none; 
   font-size: 12px; 
 } 
+
 .trafficAndMobile {
   display: grid;
   grid-template-columns: 50% 50%;
@@ -570,10 +608,10 @@ padding-left: 20px;
   padding-left: 0; 
 }
 
-
 .myChartBar {
   width: 300px; 
 }
+
 .wrapperBar,
 .wrapperDoughnut {
   border: 1px solid grey;
@@ -584,8 +622,7 @@ padding-left: 20px;
     display: grid;
     grid-template-columns: 33.33% 33.33% 33.33%;
     gap: 2px; 
-    padding-left: 15px; 
-   
+    padding-left: 15px;  
 }
 
 .facebook,
@@ -594,18 +631,18 @@ padding-left: 20px;
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 100%;
-    
     padding: 0px;
-   
     margin:0; 
     padding-right: 0; 
 }
+
 .social-text p,
 .social-text h4 {
   font-size:8px;
   padding-top: 8px; 
   padding-left: 2px; 
 }
+
 .social-image {
   margin-bottom: 15px; 
   height: 4px; 
@@ -616,7 +653,6 @@ padding-left: 20px;
   margin-top: 9px;
   padding-bottom: 5px; 
 }
-
 
 #instagram, 
 #facebook,
@@ -708,11 +744,12 @@ padding-left: 20px;
 .settings-button {
   gap: 37px; 
 }
+
 .mem {
   border-bottom: 1px solid lightgray; 
 }
 
-}
+}/*END MEDIA QUERY FOR 768px____________*/
 
 /* _______________for 1024px__________ */
 
@@ -735,6 +772,7 @@ padding-left: 20px;
       grid-template-rows:  repeat(5, 145px);
     }
   }
+
   .newMembersAndRecentActivityTwo {
     grid-area: newMembersAndRecentActivityTwo;
     grid-template-rows:  repeat(5, 145px);
@@ -745,6 +783,7 @@ padding-left: 20px;
     padding-top: 7px; 
     border: 1px solid lightgray; 
   }
+
   .recentActivity,
   .newMembers {
     border: 1px solid lightgray; 
@@ -756,6 +795,7 @@ padding-left: 20px;
     grid-template-rows: 300px; 
     border-right: 1px solid lightgray; 
   }
+
   .textarea {
     padding-bottom: 35px; 
   }
@@ -763,5 +803,5 @@ padding-left: 20px;
   .rightCol {
     border-right: 1px solid lightgray;
   }
- 
 }
+/* End Media Queries */

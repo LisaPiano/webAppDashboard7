@@ -1,4 +1,4 @@
-
+//INSERT CHARTS
 
 let ctxOneHourly = document.getElementById("myChartLineHourly").getContext("2d");
 let ctxTwo = document.getElementById("myChartBar").getContext("2d");
@@ -70,17 +70,14 @@ options: {
   let hourly = document.querySelector(".traffic-nav-hourly");
   let daily = document.querySelector(".traffic-nav-daily");
   let weekly = document.querySelector(".traffic-nav-weekly");
-let monthly = document.querySelector(".traffic-nav-monthly");
+  let monthly = document.querySelector(".traffic-nav-monthly");
+  let decoration = document.querySelector(".decoration");
 
-hourly.addEventListener('click', (e) => {
-  hourly.style.backgroundColor = "#0ac50a9c"; 
-  hourly.style.border = "solid 1px #0ac50a9c"; 
-  hourly.style.opacity = "85%"; 
-  hourly.style.color = "white"; 
-  hourly.style.borderRadius = "24px"; 
-  daily.style = "revert";
-  weekly.style = "revert";
-  monthly.style = "revert";
+  hourly.addEventListener('click', (e) => {
+  hourly.classList.add("decoration");
+  daily.classList.remove("decoration");
+  weekly.classList.remove("decoration");
+  monthly.classList.remove("decoration");
   let myChartLineHourly = new Chart(ctxOneHourly, {
     type: "line", 
     data: { 
@@ -96,7 +93,7 @@ hourly.addEventListener('click', (e) => {
               borderWidth: .5
   
       }//end datasets
-    ]//end datasets array. Don't understand. Is this an object in an array? Argh!
+    ]//end datasets array. Still don't understand. 
   },//end myChartLine
   options: {
       legend: {
@@ -112,18 +109,14 @@ hourly.addEventListener('click', (e) => {
       }
   }
   });
-  
 });
 
 daily.addEventListener('click', (e) => {
-  daily.style.backgroundColor = "#0ac50a9c"; 
-  daily.style.border = "solid 1px #0ac50a9c"; 
-  daily.style.opacity = "85%"; 
-  daily.style.color = "white"; 
-  daily.style.borderRadius = "24px"; 
-  hourly.style = "revert";
-  weekly.style = "revert";
-  monthly.style = "revert";
+  daily.classList.add("decoration");
+  hourly.classList.remove("decoration");
+  weekly.classList.remove("decoration");
+  monthly.classList.remove("decoration");
+  
   let myChartLineHourly = new Chart(ctxOneHourly, {
     type: "line", 
     data: { 
@@ -139,7 +132,7 @@ daily.addEventListener('click', (e) => {
               borderWidth: .5
   
       }//end datasets
-    ]//end datasets array. Don't understand. Is this an object in an array? Argh!
+    ]//end datasets array. Hopefully, this will all make sense some day.
   },//end myChartLine
   options: {
       legend: {
@@ -158,14 +151,12 @@ daily.addEventListener('click', (e) => {
 });
 
 weekly.addEventListener('click', (e) => {
-  weekly.style.backgroundColor = "#0ac50a9c"; 
-  weekly.style.border = "solid 1px #0ac50a9c"; 
-  weekly.style.opacity = "85%"; 
-  weekly.style.color = "white"; 
-  weekly.style.borderRadius = "24px"; 
-  hourly.style = "revert";
-  daily.style = "revert";
-  monthly.style = "revert";
+
+  weekly.classList.add("decoration");
+  daily.classList.remove("decoration");
+  hourly.classList.remove("decoration");
+  monthly.classList.remove("decoration");
+  
   let myChartLineHourly = new Chart(ctxOneHourly, {
     type: "line", 
     data: { 
@@ -181,7 +172,7 @@ weekly.addEventListener('click', (e) => {
               borderWidth: .5
   
       }//end datasets
-    ]//end datasets array. Don't understand. Is this an object in an array? Argh!
+    ]//end datasets array.
   },//end myChartLine
   options: {
       legend: {
@@ -200,14 +191,10 @@ weekly.addEventListener('click', (e) => {
 });
   
 monthly.addEventListener('click', (e) => {
-  monthly.style.backgroundColor = "#0ac50a9c"; 
-  monthly.style.border = "solid 1px #0ac50a9c"; 
-  monthly.style.opacity = "85%"; 
-  monthly.style.color = "white"; 
-  monthly.style.borderRadius = "24px"; 
-  daily.style = "revert";
-  weekly.style = "revert";
-  hourly.style = "revert";
+  monthly.classList.add("decoration");
+  daily.classList.remove("decoration");
+  weekly.classList.remove("decoration");
+  hourly.classList.remove("decoration");
   let myChartLineHourly = new Chart(ctxOneHourly, {
     type: "line", 
     data: { 
@@ -223,7 +210,7 @@ monthly.addEventListener('click', (e) => {
               borderWidth: .5
   
       }//end datasets
-    ]//end datasets array. Don't understand. Is this an object in an array? Argh!
+    ]//end datasets array.
   },//end myChartLine
   options: {
       legend: {
@@ -301,13 +288,13 @@ bell.addEventListener("click", (e) => {
   window.alert("You have one new notification. Please choose what you would like to do.");
   circle.style.display = "none";
 });
-
+//THIS WILL WORK IF HOVER DOES NOT!!
 // bell.addEventListener ('mouseover', (e) => {
 //   bell.style.fill = "red";
 // });
 
 //_______________________________________________________________________
-//Search for User--local Storage and autofill
+//Search for User--local Storage and responses
 //_________________________________________________________________________
 
 var search = document.querySelector(".searchForUser");
@@ -316,29 +303,32 @@ let message = document.querySelector(".messageForUser");
 var conversation = message.innerHTML; 
 
 send.addEventListener("click", (e) => {
-
   if (message.value === "" && (search.value === "Victoria Chambers" || search.value === "Dale Byrd" || search.value === "Dawn Wood" || search.value === "Dan Oliver")) {
     window.alert("Please be sure to submit a message to the user before sending");
   } 
 
-   if (search.value === "" && message.value === "")
+  if (message.value !== "" && (search.value === "Victoria Chambers" || search.value === "Dale Byrd" || search.value === "Dawn Wood" || search.value === "Dan Oliver")) {
+    window.alert(`You have successfully submitted your message to ${search.value}. Thank you!`);
+  } 
+   
+  if (search.value === "" && message.value === "")
     window.alert("Please submit both the user name and a message before pressing send.");
  
   else if (search.value === "Victoria Chambers" || search.value === "Dale Byrd" || search.value === "Dawn Wood" || search.value === "Dan Oliver"){
     localStorage.name = search.value; 
     search.setAttribute = localStorage.name; 
     localStorage.conversation = message.value; 
+    message.setAttribute = localStorage.conversation;
   } else {
     window.alert("The appropriate user name was not submitted. Please try again!");
   };
-  
-  
-
- 
 });
 console.log(localStorage.name);
 console.log(localStorage.conversation);
 
+//_______________________________________________________________________
+//Search for User--auto complete for search
+//_________________________________________________________________________
 
     search.addEventListener("keyup", (e) => {
       let letter = search.value.toLowerCase();
@@ -356,11 +346,36 @@ console.log(localStorage.conversation);
           search.value = ""; 
           search.value = "Dawn Wood";
       };
-
-      
-      
     });//End Event Listener 
    
-  //_______________________________________________________________________
-//Both Search and Message must be filled in
+ 
+//_______________________________________________________________________
+//Save TIMEZONE and TOGGLE STATES in localStorage with SAVE BUTTON!!!
 //_________________________________________________________________________
+
+let save = document.querySelector("#save");
+let timezone = document.querySelector("#timezone");
+let cancel = document.querySelector("#cancel");
+let cmn1 = document.querySelector(".toggle1");
+let cmn2 = document.querySelector(".toggle2");
+
+save.addEventListener("click", (e) => {
+  window.alert("Your settings have been saved.");
+  localStorage.setItem("timezone", JSON.stringify(timezone.value));
+  console.log(JSON.parse(localStorage.getItem("timezone"))); 
+  localStorage.setItem("cmn1", JSON.stringify(cmn1.value));
+  localStorage.setItem("cmn2", JSON.stringify(cmn2.value));
+ });
+
+ 
+
+//_______________________________________________________________________
+//CANCEL SETTINGS AND TOGGLE ON OFF in localStorage
+//_________________________________________________________________________
+
+cancel.addEventListener("click", (e) => {
+  window.alert("Your settings have been cancelled");
+ localStorage.removeItem("timezone");
+ localStorage.removeItem("cmn1");
+ localStorage.removeItem("cmn2");
+}); 
