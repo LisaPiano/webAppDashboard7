@@ -56,19 +56,17 @@ OVERALL STYLES
  }
 
   .bell-icon {
-    display: block; 
     padding-top: 45px; 
     padding-left: 2px; 
   }
 
-  .bell {
-    displaly: block; 
-    transition: transform 2s ease-out;
+  .bell:hover {
+    transform: rotate(90deg);
+    fill: red; 
   }
 
-  .bell-icon:hover {
-    fill: red; 
-    tranform: rotate(44deg);
+  .bell {
+    transition: transform .5s ease-out; 
   }
 
   .choose {
@@ -188,11 +186,11 @@ OVERALL STYLES
 } 
 
 .decoration {
-background-color: rgba(10, 197, 10, 0.61);
-border: 1px solid rgba(10, 197, 10, 0.61);
-opacity: 0.85;
-color: white;
-border-radius: 24px;
+  background-color: rgba(10, 197, 10, 0.61);
+  border: 1px solid rgba(10, 197, 10, 0.61);
+  opacity: 0.85;
+  color: white;
+  border-radius: 24px;
 }
 
 .traffic-nav li {

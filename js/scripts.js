@@ -295,6 +295,7 @@ bell.addEventListener("click", (e) => {
 
 //_______________________________________________________________________
 //Search for User--local Storage and responses
+
 //_________________________________________________________________________
 
 var search = document.querySelector(".searchForUser");
@@ -379,3 +380,4 @@ cancel.addEventListener("click", (e) => {
  localStorage.removeItem("cmn1");
  localStorage.removeItem("cmn2");
 }); 
+
