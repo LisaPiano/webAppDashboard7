@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
   }
 
 /* 
@@ -26,7 +25,7 @@ OVERALL STYLES
     grid-template-areas: 
     "header"
     "nav"
-    "main"
+    "main";
   }
 /* ---------------------HEADER---------------------------- */
   .header {
@@ -37,7 +36,7 @@ OVERALL STYLES
     background-color: rgb(66, 103, 178);
     opacity: 100%;
     color: white; 
-    grid-template-columns:  18% 10% 42% 3% 7% 14% 2%;
+    grid-template-columns:  18% 10% 24% 3% 16% 20% 2%;
     grid-template-rows: auto;  
   }
   .webapp {
@@ -95,9 +94,10 @@ OVERALL STYLES
     padding-top: 40px;
   }
   .student-name{
-    font-size: 6px; 
+    font-size: 10px; 
      padding-top: 55px;
      padding-left: 20px; 
+     width: 100%; 
   }
 
   /* ________________________________NAV_____________________________  */
@@ -261,7 +261,7 @@ OVERALL STYLES
 #facebook,
 #twitter {
   fill:white; 
-  translateX: 300px; 
+   translateX: 300px;  
 }
 
 /* _______________newMembers and RecentActivity____________ */

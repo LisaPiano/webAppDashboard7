@@ -5,7 +5,7 @@ let ctxTwo = document.getElementById("myChartBar").getContext("2d");
 let ctxThree = document.getElementById("myChartDoughnut").getContext("2d");
 
 let myChartLineHourly = new Chart(ctxOneHourly, {
-  type: "line", 
+  type: "line",
   data: { 
           labels: ["16/22", "23-29", "30-05", "6-12", "13-19", "20-26", "27-3", "4-10", "11-17", "18-24", "25-31"],
           datasets: [
@@ -16,7 +16,7 @@ let myChartLineHourly = new Chart(ctxOneHourly, {
               "#cdcdcd",
               borderColor: 
               "#778899",
-            borderWidth: .5
+            borderWidth: 0.5
 
     }//end datasets
   ]//end datasets array. Don't understand. Is this an object in an array? Argh!
@@ -37,7 +37,7 @@ options: {
 });
 
 let myChartBar = new Chart(ctxTwo, {
-    type: 'bar',
+    type: "bar",
     data: {
           labels: ["S", "M", "T", "W", "T", "F", "S"],
           datasets: [
@@ -90,7 +90,7 @@ options: {
                 "#cdcdcd",
                 borderColor: 
                 "#778899",
-              borderWidth: .5
+              borderWidth: 0.5
   
       }//end datasets
     ]//end datasets array. Still don't understand. 
@@ -150,7 +150,7 @@ daily.addEventListener('click', (e) => {
   });
 });
 
-weekly.addEventListener('click', (e) => {
+weekly.addEventListener("click", (e) => {
 
   weekly.classList.add("decoration");
   daily.classList.remove("decoration");
@@ -190,7 +190,7 @@ weekly.addEventListener('click', (e) => {
   });
 });
   
-monthly.addEventListener('click', (e) => {
+monthly.addEventListener("click", (e) => {
   monthly.classList.add("decoration");
   daily.classList.remove("decoration");
   weekly.classList.remove("decoration");
@@ -231,7 +231,7 @@ monthly.addEventListener('click', (e) => {
 
 
     let myChartDoughnut = new Chart(ctxThree, {
-        type: 'doughnut',
+        type: "doughnut",
         data: {
             labels: ["Desktop", "Tablet", "Phones"],
             datasets: [
@@ -288,10 +288,7 @@ bell.addEventListener("click", (e) => {
   window.alert("You have one new notification. Please choose what you would like to do.");
   circle.style.display = "none";
 });
-//THIS WILL WORK IF HOVER DOES NOT!!
-// bell.addEventListener ('mouseover', (e) => {
-//   bell.style.fill = "red";
-// });
+
 
 //_______________________________________________________________________
 //Search for User--local Storage and responses
@@ -380,4 +377,3 @@ cancel.addEventListener("click", (e) => {
  localStorage.removeItem("cmn1");
  localStorage.removeItem("cmn2");
 }); 
-
