@@ -212,7 +212,7 @@ OVERALL STYLES
 .wrapperBar,
 .wrapperDoughnut,
 .wrapperLine {
-    padding-top: 40px; 
+    padding-left: 20px; 
     padding-bottom: 10px; 
     max-width: 300px;
     margin: 0 auto;
@@ -220,6 +220,7 @@ OVERALL STYLES
 
 .wrapperLine {
   padding-left: 10px; 
+  padding-top: 18px; 
 }
     
 
@@ -242,10 +243,12 @@ OVERALL STYLES
 .social-text h4{
   color:  rgb(104, 129, 238);
   font-size: 20px;
+  padding-left: 30px; 
 }
 
 .social-text p {
-  font-size: 40px;
+  font-size: 28px;
+  padding-left: 29px;
 }
 
 .social-image {
@@ -261,7 +264,7 @@ OVERALL STYLES
 #facebook,
 #twitter {
   fill:white; 
-   translateX: 300px;  
+   transform: translateX(300px);  
 }
 
 /* _______________newMembers and RecentActivity____________ */
@@ -271,7 +274,6 @@ OVERALL STYLES
 .newMembersAndRecentActivityOne {
   display: grid; 
   grid-template-columns: 100%; 
-  grid-template-rows: repeat (5, 170px);
   text-align: center; 
   grid-template-areas:
   "newMembers"
@@ -284,7 +286,6 @@ OVERALL STYLES
 .newMembersAndRecentActivityTwo {
   display: grid; 
   grid-template-columns: 100%; 
-  grid-template-rows: 8% repeat(4, 170px);
   text-align: center; 
   grid-template-areas:
   "recentActivity"
@@ -337,6 +338,7 @@ OVERALL STYLES
 .memPhoto,
 .memberText {
   justify-content: center; 
+  padding-right: 5px; 
 }
 
 .memberPhoto {
@@ -575,25 +577,25 @@ padding-left: 20px;
 
 .first-traffic-chart {
   width: 100%;
-  height; 200px; 
+  height: 200px; 
+  padding-bottom: 270px; 
 }
 
-/* .first-traffic-chart {
-  display: grid; 
-  grid-template-columns: 100%; 
-  width: 600px; 
-  align-self: center; 
-  padding-left: 350px; 
-} */
+
 
 .traffic-nav {
   padding-top: 22px; 
   display: grid; 
   grid-template-columns: 38% 24% 28% 25%; 
+  row-gap: 80px; 
   grid-template-rows: 40px; 
   list-style-type: none; 
   font-size: 12px; 
 } 
+
+#myChartLineHourly {
+  padding-bottom: 10px;  
+}
 
 .trafficAndMobile {
   display: grid;
@@ -636,7 +638,7 @@ padding-left: 20px;
 
 .social-text p,
 .social-text h4 {
-  font-size:8px;
+  font-size:16px;
   padding-top: 8px; 
   padding-left: 2px; 
 }
@@ -747,6 +749,10 @@ padding-left: 20px;
   border-bottom: 1px solid lightgray; 
 }
 
+.sendButton {
+  padding-top: 30px; 
+}
+
 }/*END MEDIA QUERY FOR 768px____________*/
 
 /* _______________for 1024px__________ */
@@ -766,10 +772,8 @@ padding-left: 20px;
 
   .newMembersAndRecentActivityOne {
     grid-area: newMembersAndRecentActivityOne;
-    .newMembersAndRecentActivityTwo {
       grid-template-rows:  repeat(5, 145px);
     }
-  }
 
   .newMembersAndRecentActivityTwo {
     grid-area: newMembersAndRecentActivityTwo;
