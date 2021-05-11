@@ -30,33 +30,45 @@ OVERALL STYLES
 /* ---------------------HEADER---------------------------- */
   .header {
     grid-area: header;
-    display: grid; 
+    display: flex; 
+    flex-wrap: nowrap; 
+    justify-content: space-evenly; 
+    align-items: center;
     font-family: 'Roboto', sans-serif;
-    height: 100px; 
+    height: 60px; 
+    width: 100%; 
     background-color: rgb(66, 103, 178);
     opacity: 100%;
     color: white; 
-    grid-template-columns:  18% 10% 24% 3% 16% 20% 2%;
-    grid-template-rows: auto;  
   }
-  .webapp {
-    padding-top: 50px; 
-    padding-left: 2px; 
-    font-size: 8px; 
+  .rightColumn {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center; 
+  }
+  
+  .webapp { 
+    font-size:7px; 
+    padding-left: 8px; 
+    width: 105px; 
   }
   
  .circle {
    border-radius: 50%;
    background-color: greenyellow; 
-   height: 10px; 
-   width: 10px; 
-   margin-top: 35px; 
-   margin-left: 70px; 
+   height: 9px; 
+   width: 9px; 
+   margin-bottom: 28px; 
+   margin-left: 10px; 
+   
  }
 
   .bell-icon {
     padding-top: 45px; 
     padding-left: 2px; 
+    /* margin-left: 28px; s */
+    margin-right: -11px; 
   }
 
   .bell:hover {
@@ -66,6 +78,7 @@ OVERALL STYLES
 
   .bell {
     transition: transform .5s ease-out; 
+    margin-bottom: 35px;
   }
 
   .choose {
@@ -77,40 +90,41 @@ OVERALL STYLES
       border: black; 
       height: 40px;
       width: 40px; 
-      margin-top: 40px; 
+      margin-top: 12px; 
       transition: transform 2s; 
   }
 
   .first-face img:hover {
     transform: rotate(90deg);
   }
-  .line {
+   .line {
     background-color: white;  
     width: 1px; 
-    margin-top: 30px; 
-    margin-left: 135px; 
+    margin-top: 9px; 
+    margin-left: 16px;
+    margin-right: 16px; 
     opacity: 60%; 
-    height: 50px; 
-    padding-top: 40px;
+    height: 35px; 
+     padding-top: 40px; 
   }
   .student-name{
-    font-size: 10px; 
-     padding-top: 55px;
-     padding-left: 20px; 
-     width: 100%; 
+    font-size: 8px; 
+     padding-left: 18px; 
   }
 
   /* ________________________________NAV_____________________________  */
   
   .nav {
     grid-area: nav;
-    height: 100px; 
-    display: grid;
-    padding-left: 45px;  
+    height: 60px; 
+    display: flex;
+    flex-wrap: nowrap; 
+    justify-content: space-between; 
+    padding-left: 40px; 
+    padding-right: 40px; 
+    align-items: center;
     background-color: midnightblue;
     opacity: 80%;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: auto; 
   }
 
   .bell-icon,
@@ -119,7 +133,6 @@ OVERALL STYLES
   .members-icon,
   .settings-icon {
     fill: white; 
-    padding-top: 45px; 
   }
 
   /* ___________________________MAIN_____________ */
@@ -131,9 +144,10 @@ OVERALL STYLES
 /* ___________________________Dashboard and Search_____________ */
   
 .dashboard-and-search {
-  display: grid; 
-  grid-template-columns: 20% 80%;
-  grid-template-rows: 60px; 
+  display: flex; 
+  flex-wrap: nowrap; 
+  justify-content: space-between; 
+
 }
 .dashboard-text {
   padding-top: 15px;
@@ -141,18 +155,20 @@ OVERALL STYLES
 }
 
 .search {
-  padding-left: 80px; 
+  padding-left: 11px; 
 }
 
 .search-placeholder {
   height: 40px; 
-  width: 99%; 
-  padding-left: 50px; 
+  width: 100%; 
+  padding-left: 40px; 
   padding-top: 20px; 
   padding-bottom: 35px; 
+  margin-bottom: 23px; 
   background-color: #e0e0e0;
+  opacity: 40%; 
   font-size: 20px; 
-  border: lightgray; 
+  border: 2px solid lightslategray; 
 }
 /* ___________________________Alert_____________ */
 
@@ -230,19 +246,20 @@ OVERALL STYLES
 .facebook,
 .instagram,
 .twitter {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 100%;
+    display: flex;
+    /* grid-template-columns: 50% 50%;
+    grid-template-rows: 100%; */
     border: 1px solid rgb(0, 139, 127); 
     padding: 30px;
     background-color: rgb(244, 249, 252);
     margin: 12px; 
     padding-right: 72px; 
+    height: 110px; 
 }
 
 .social-text h4{
   color:  rgb(104, 129, 238);
-  font-size: 20px;
+  font-size: 15px;
   padding-left: 30px; 
 }
 
@@ -253,18 +270,20 @@ OVERALL STYLES
 
 .social-image {
   border-radius: 50%;
-  height: 80px;
-  width: 80px; 
+  height: 47px;
+  width: 47px; 
   background-color:  rgb(66, 103, 178);
-  padding-left: 18px; 
-  padding-top: 18px;
 }
 
 #instagram, 
 #facebook,
 #twitter {
   fill:white; 
-   transform: translateX(300px);  
+   /* transform: translateX(300px);   */
+   height: 37px;
+   width: 37px; 
+   padding-left: 10px; 
+   padding-top: 10px; 
 }
 
 /* _______________newMembers and RecentActivity____________ */
@@ -405,16 +424,31 @@ a {
 
 
 .toggleOnOff {
-  display: grid;
-  grid-template-columns: 75% 25%; 
-  grid-template-rows: 50px 50px;
-  gap: 15px; 
   width: 60%; 
   padding-left: 20px; 
 }
+#email,
+#profile {
+  font-size: 12px; 
+  width: 160px; 
+}
 
 .off {
-  padding-left: 25px; 
+  font-size: 10px; 
+  padding-left: 30px; 
+}
+
+.on {
+  font-size: 10px; 
+  padding-left: 5px; 
+}
+.switchWords {
+  display: flex; 
+  align-items: center; 
+  padding-top: 7px; 
+  padding-left: 10px; 
+  width: 234px; 
+  margin-bottom: 20px;
 }
 
 .cmn-toggle {
@@ -432,27 +466,29 @@ a {
 }
 
 input.cmn-toggle-round + label {
-  padding: 20px;
   color: #fff; 
-  width: 120px;
-  height: 60px;
+  width: 72px;
+  height: 29px;
   background-color: rgb(104, 129, 238);
   border-radius: 60px;
   border: 2px solid grey; 
 }
-
-input.cmn-toggle-round + label:before,
+/* 
+input.cmn-toggle-round + label:before, */
 input.cmn-toggle-round + label:after {
   display: block;
   position: absolute;
   top: 1px;
-  left: 61px;
+  left: 47px;
   bottom: 1px;
-  content: "OFF";
-  padding-top: 20px; 
+  content: "";
+  padding-bottom: 15px; 
 }
 
 input.cmn-toggle-round + label:before {
+  display: block;
+  position: absolute;
+  content: "ON"
   right: 1px;
   background-color:  rgb(104, 129, 238);
   border-radius: 60px;
@@ -461,8 +497,8 @@ input.cmn-toggle-round + label:before {
 }
 
 input.cmn-toggle-round + label:after {
-  width: 53px;
-  height: 28px; 
+  width: 20px;
+  height: 5px; 
   background-color: #fff;
   border-radius: 100%;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
@@ -475,8 +511,9 @@ input.cmn-toggle-round:checked + label:before {
 }
 
 input.cmn-toggle-round:checked + label:after {
-  margin-left: -60px;
+  margin-left: -45px;
 }
+
 
 
 /* _________SELECT_____ */
@@ -485,7 +522,7 @@ select {
 width: 90%; 
 margin-left: 20px; 
 margin-top: 30px; 
-height: 50px; 
+height: 40px; 
 background-color: #e0e0e0; 
 padding-right: 30px; 
 padding-left: 20px; 
@@ -503,7 +540,7 @@ padding-left: 20px;
 
 .button-primary,
 .button-disabled {
-  height: 50px; 
+  height: 40px; 
   width: 140px; 
   margin-left: 20px; 
   border-radius: 8px; 
@@ -525,61 +562,50 @@ padding-left: 20px;
 @media only screen and (min-width: 321px){
   .grid-container {
     display: grid; 
-    grid-template-columns: 18% auto;
+    grid-template-columns: 12% auto;
     grid-template-areas: 
     "header header"
     "nav main"
   }
 
   .header {
-    grid-area: header;
-    display: grid;
-    height: 100px; 
-    background-color: rgb(66, 103, 178);
-    opacity: 100%;
-    color: white; 
-    grid-template-columns:  11% 10% 19% 21% 13% 12% 10%;
-    grid-template-rows: auto; 
-    padding-right: 15px; 
-  }
-  .circle {
-    margin-left: 107px; 
-  }
+    justify-content: space-between;
+  } 
 
-  .webapp {
-    padding-left: 10px; 
+  .student-name {
+    padding-right: 10px; 
   }
+  /* --------------------------------------------------------- */
   .nav {
-    grid-area: nav;
-    display: grid;
-    height: 100%; 
-    background-color: midnightblue;
-    opacity: 80%;
-    grid-template-columns: 100%;
-    grid-template-rows: 5% 5% 5% 95%; 
+   flex-direction: column;
+   justify-content: flex-start;
+   height: 100%; 
+   flex-wrap: wrap; 
+   padding-left: 5px; 
+   padding-right: 5px; 
   }
 
-.line-icon {
-  padding-left: 258px; 
+  .home-icon,
+  .bar-icon,
+  .members-icon,
+  .settings-icon {
+    padding-bottom: 20px; 
+  }
+ 
+.home-icon {
+  padding-top: 20px; 
 }
 
-.home-icon,
-.bar-icon,
-.members-icon,
-.settings-icon {
-  transform: translateX(-40px); 
-}
-
-.search-placeholder {
-  margin-left: 7px; 
-  width: 99%; 
+.search {
+  padding-left: 11px;
+  width: 100%;
 }
 
 .first-traffic-chart {
   width: 100%;
   height: 200px; 
   padding-bottom: 270px; 
-}
+} */
 
 
 
