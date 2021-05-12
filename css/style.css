@@ -20,6 +20,7 @@ OVERALL STYLES
 
   .grid-container {
     display: grid; 
+    width: 100%;
     grid-template-columns: 100%;
     grid-template-rows: auto; 
     grid-template-areas: 
@@ -196,10 +197,13 @@ OVERALL STYLES
 
 .traffic-nav {
   display: grid; 
-  grid-template-columns: 31% 23% 23% 23%; 
+  grid-template-columns: 25% 25% 25% 25%; 
   grid-template-rows: 40px; 
   list-style-type: none; 
 } 
+.trafficText {
+  padding-left: 20px; 
+}
 
 .decoration {
   background-color: rgba(10, 197, 10, 0.61);
@@ -247,14 +251,15 @@ OVERALL STYLES
 .instagram,
 .twitter {
     display: flex;
-    /* grid-template-columns: 50% 50%;
-    grid-template-rows: 100%; */
+    justify-content: space-between;
     border: 1px solid rgb(0, 139, 127); 
     padding: 30px;
     background-color: rgb(244, 249, 252);
     margin: 12px; 
     padding-right: 72px; 
     height: 110px; 
+    width: 292px; 
+    padding-bottom: 102px;
 }
 
 .social-text h4{
@@ -270,8 +275,8 @@ OVERALL STYLES
 
 .social-image {
   border-radius: 50%;
-  height: 47px;
-  width: 47px; 
+  height: 63px;
+  width: 66px; 
   background-color:  rgb(66, 103, 178);
 }
 
@@ -279,12 +284,12 @@ OVERALL STYLES
 #facebook,
 #twitter {
   fill:white; 
-   /* transform: translateX(300px);   */
-   height: 37px;
-   width: 37px; 
-   padding-left: 10px; 
-   padding-top: 10px; 
+   height: 42px;
+   width: 62px; 
+   transform: translate(2px, 11px);
 }
+
+
 
 /* _______________newMembers and RecentActivity____________ */
 
@@ -478,8 +483,7 @@ input.cmn-toggle-round + label:before, */
 input.cmn-toggle-round + label:after {
   display: block;
   position: absolute;
-  top: 1px;
-  left: 47px;
+  left: 43px;
   bottom: 1px;
   content: "";
   padding-bottom: 15px; 
@@ -571,6 +575,9 @@ padding-left: 20px;
   .header {
     justify-content: space-between;
   } 
+  .bell-icon {
+    margin-right: 0px; 
+  }
 
   .student-name {
     padding-right: 10px; 
@@ -600,6 +607,32 @@ padding-left: 20px;
   padding-left: 11px;
   width: 100%;
 }
+
+.alert {
+  grid-template-rows: 5px;
+}
+
+/* _______________________________________________________________
+CHARTS
+_________________________________________________________________ */
+
+.traffic {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 133px; 
+}
+
+.traffic-nav {
+  grid-template-columns:25% 25% 25% 25%; 
+  column-gap: 20px; 
+  grid-template-rows: 40px; 
+}
+
+/* .trafficHeadings {
+  padding-top: 34px; 
+} */
+
 
 .first-traffic-chart {
   width: 100%;
@@ -651,16 +684,9 @@ padding-left: 20px;
     padding-left: 15px;  
 }
 
-.facebook,
-.instagram,
-.twitter {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 100%;
-    padding: 0px;
-    margin:0; 
-    padding-right: 0; 
-}
+
+
+
 
 .social-text p,
 .social-text h4 {
@@ -670,22 +696,23 @@ padding-left: 20px;
 }
 
 .social-image {
-  margin-bottom: 15px; 
-  height: 4px; 
-  width: 38px; 
+  height: 72px; 
+  width: 77px; 
   padding-left: 10px;
-  padding-top: 30px;
+  padding-top: 43px;
   margin-left: 4px; 
-  margin-top: 9px;
-  padding-bottom: 5px; 
+  padding-bottom: 25px; 
+  margin-bottom: 61px; 
 }
 
 #instagram, 
 #facebook,
 #twitter {
-  transform: translateY(-32px); 
-  width: 17px;
-  height: 42px;  
+  fill:white; 
+   height: 42px;
+   margin: 0 auto; 
+   width: 100%;
+   transform: translate(-6px, -32px); 
 }
 
 .newMembersAndRecentActivityTwo {
@@ -784,9 +811,7 @@ padding-left: 20px;
 /* _______________for 1024px__________ */
 
 @media only screen and (min-width: 769px){
-  .circle {
-    margin-left: 150px;
-  }
+  
 
   .wrapperMembersAndActivity {
     display: grid; 
